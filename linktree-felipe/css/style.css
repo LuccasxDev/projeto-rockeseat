@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(/assets/bgdark.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color:  rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(/assets/bglight.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color:  rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color:  rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 160px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 16px;
+}
+
+#switch  button {
+  width: 32px;
+  height: 32px;
+  background: white url(/assets/moon-stars.svg) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid  var(--stroke-color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/*social-links*/
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: backgound 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+  padding: 16px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 24px;
+}
